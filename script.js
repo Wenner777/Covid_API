@@ -35,3 +35,19 @@ function mostrarStatus(dados){
     }
     
 }
+
+const infoPais = document.querySelector("#infoPais");
+casosPais();
+
+function casosPais(){
+    fetch("https://covid19-brazil-api.now.sh/api/report/v1/brazil")
+    .then(res => res.json())
+    .then(dados => {
+        const casos = dados.cases;
+        exibirPais(casos);
+    })
+}
+
+function exibirPais(casos){
+    infoPais.innerHTML = `${casos}`;
+}
