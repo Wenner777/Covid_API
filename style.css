@@ -1,0 +1,7 @@
+#onOff{
+    color: green;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: flex-end;    
+}

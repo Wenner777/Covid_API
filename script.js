@@ -27,10 +27,10 @@ function verificaçãoAPI(){
 //* Exibe a condição atual do site online/offline
 function mostrarStatus(dados){
     if(dados === 1){
-        console.log("online");
-        
+        onOff.textContent = `ONLINE`;
+
     } else if(dados === 0){
-        console.log("offline");
+        onOff.textContent = `OFFLINE`;
         
     }
     
