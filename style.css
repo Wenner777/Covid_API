@@ -1,7 +1,111 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
 #onOff{
-    color: green;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 100px;
+    padding: 7px 10px;
+    border: none;
+    background-color: white;
+    color: #00c16c;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#cabecalhoPagina{
+    background-color: #d4f1db;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+#logo{
+    width: 200px;
+    margin-top: 40px;
+}
+
+#tituloCabecalho{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+}
+
+#finalPagina{
+    background-color: #092b5a;
+}
+
+#h3SobreNos{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.paragrafoSobreNos{
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+#blocoSobreNos{
+    width: 300px;
+    text-align: justify;
+    padding: 2px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#secaoFooter{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#contato{
+    color: white;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#paragrafoContato{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#paragrafoContato:hover{
+    color: #f6e2bb;
+    transform: scale(1.1);
+}
+
+#referencia{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#paragrafoCoronavirus{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#paragrafoCoronavirus:hover{
+    color: #f6e2bb;
+    transform: scale(1.1);
+}
+
+.tituloSobreNos{
     display: flex;
-    justify-content: flex-end;    
+    align-items: center;
+    gap: 8px;
+}
+
+.imgSeta{
+    width: 20px;
 }

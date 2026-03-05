@@ -75,3 +75,32 @@ function casosPais(pais) {
 function exibirPais(confirmado, mortes) {
     infoPais.innerHTML = `${casos}`;
 }
+
+/**
+ * Função para redirecionar para um site
+*/
+const paragrafoContato = document.querySelector("#paragrafoContato");
+const paragrafoCoronavirus = document.querySelector("#paragrafoCoronavirus");
+
+paragrafoContato.addEventListener("click", () => {
+    window.location.href = "https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvsus";
+});
+
+paragrafoCoronavirus.addEventListener("click", () => {
+    window.location.href = "https://covid.saude.gov.br/";
+});
+
+//* Função do icone
+const tituloSobreNos = document.querySelector(".tituloSobreNos");
+const paragrafoSobreNos = document.querySelector(".paragrafoSobreNos");
+const imgSeta = document.querySelector(".imgSeta");
+
+tituloSobreNos.addEventListener("click", () => {
+    paragrafoSobreNos.classList.toggle("paragrafoSobreNos");
+
+    if(tituloSobreNos.classList.contains("paragrafoSobreNos")){
+        imgSeta.src = "assets/icons/setaCima.png";
+    } else{
+        imgSeta.src = "assets/icons/setaBaixo.png";
+    }
+});
