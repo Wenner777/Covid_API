@@ -28,16 +28,18 @@ function verificaçãoAPI() {
 function mostrarStatus(dados) {
     if (dados === 1) {
         onOff.textContent = `ONLINE`;
-
+        console.log("Sistema Online!");
+        
     } else if (dados === 0) {
         onOff.textContent = `OFFLINE`;
-
+        console.log("Sistema Offline!");
+        
     }
 
 }
 
 /**
- * Nessa parte o codigo vai pegar o select é busca a informação na API 
+ * Nessa parte o codigo vai pegar o select é buscar a informação na API 
 */
 
 // Variaveis do Select
@@ -45,7 +47,7 @@ const infoPais = document.querySelector("#infoPais");
 const selectPaises = document.querySelector("#selectPais");
 const btnSelecionarPaises = document.querySelector("#buttonSelect");
 
-//* Função para chamar
+//* Função para chamar os pais selecionado no select
 btnSelecionarPaises.addEventListener("click", () => {
     const valorDoselect = selectPaises.value;   
 
@@ -59,12 +61,17 @@ function casosPais(pais) {
     fetch(`https://covid19-brazil-api.vercel.app/api/report/v1/${pais}`)
         .then(res => res.json())
         .then(dados => {
-            const dadosPais = dados.data.cases;
+            const dadosConfirmados = dados.data.confirmed;
+            const dadosMortes = dados.data.deaths;
 
-            exibirPais(dadosPais);
+            exibirPais(dadosConfirmados, dadosMortes);
         })
+    .catch(() => {
+        console.log("Error!");
+        
+    });
 }
 
-function exibirPais(casos) {
+function exibirPais(confirmado, mortes) {
     infoPais.innerHTML = `${casos}`;
 }
