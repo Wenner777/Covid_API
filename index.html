@@ -11,9 +11,20 @@
 <body>
     <!--* Cabeçalho da página -->
     <header id="cabecalhoPagina">
-        <img src="assets/imagens/logoCovid.png" alt="LogoPagina" id="logo">
-        <h3 id="tituloCabecalho">Relatório do Covid por países</h3>
-        <p id="onOff"></p>
+        <div class="logoEimg">
+            <img src="assets/imagens/logoCovid.png" alt="LogoPagina" id="logo">
+            <h1 id="tituloCabecalho">Relatório do Covid por países</h1>
+        </div>
+        <nav class="barraNavegacao">
+            <a class="linkPagina" href="">Inicio</a> <!--! Falta adicionar link -->
+            <a class="linkPagina" href="#blocoSobreNos">Sobre nós</a>
+            <a class="linkPagina" href="#contato">Atendimento</a>
+        </nav>
+
+        <!--* Mostra o status da página -->
+        <div class="statusOnline">
+            <p id="onOff"></p>
+        </div>
     </header>
 
     <!--* Conteúdo principal da página -->
@@ -214,7 +225,7 @@
             <div id="blocoSobreNos">
                 <div class="tituloSobreNos">
                     <h3 id="h3SobreNos">Sobre nós </h3>
-                    <img src="assets/icons/setaCima.png" alt="setaParaCima" class="imgSeta">
+                    <img class="imgSeta" id="setaIcons" src="assets/icons/setaCima.png" alt="setaParaCima">
                 </div>
                 <p class="paragrafoSobreNos">
                     Este site foi desenvolvido com o objetivo de apresentar informações e dados sobre a COVID-19 em

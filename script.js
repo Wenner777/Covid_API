@@ -93,14 +93,11 @@ paragrafoCoronavirus.addEventListener("click", () => {
 //* Função do icone
 const tituloSobreNos = document.querySelector(".tituloSobreNos");
 const paragrafoSobreNos = document.querySelector(".paragrafoSobreNos");
-const imgSeta = document.querySelector(".imgSeta");
+const imgSeta = document.querySelector("#setaIcons");
 
 tituloSobreNos.addEventListener("click", () => {
-    paragrafoSobreNos.classList.toggle("paragrafoSobreNos");
 
-    if(tituloSobreNos.classList.contains("paragrafoSobreNos")){
-        imgSeta.src = "assets/icons/setaCima.png";
-    } else{
-        imgSeta.src = "assets/icons/setaBaixo.png";
-    }
+    paragrafoSobreNos.classList.toggle("paragrafoSobreNos");
+    imgSeta.classList.toggle("imgSeta");
+    
 });
